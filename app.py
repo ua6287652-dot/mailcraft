@@ -143,16 +143,75 @@ st.markdown("""
     color: #172033 !important;
 }
 
+/* Download button: white text in normal and hover states */
+[data-testid="stDownloadButton"] button,
+[data-testid="stDownloadButton"] button:hover,
+[data-testid="stDownloadButton"] button:focus,
+[data-testid="stDownloadButton"] button:active {
+    background: #111827 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    border: 1px solid #111827 !important;
+    box-shadow: none !important;
+    transition: none !important;
+}
+[data-testid="stDownloadButton"] button *,
+[data-testid="stDownloadButton"] button:hover *,
+[data-testid="stDownloadButton"] button:focus * {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+[data-testid="stDownloadButton"] button:hover {
+    filter: none !important;
+    transform: none !important;
+}
+
+/* Hide the keyboard-shortcuts control in the Streamlit top toolbar */
+button[aria-label*="Keyboard"],
+button[title*="Keyboard"],
+button[aria-label*="keyboard"],
+button[title*="keyboard"],
+[data-testid*="Keyboard"],
+[data-testid*="keyboard"] {
+    display: none !important;
+}
+
 /* Buttons */
 div.stButton > button {
     border-radius: 12px !important;
     min-height: 44px !important;
     font-weight: 700 !important;
+    transition: none !important;
+}
+div.stButton > button:hover {
+    filter: none !important;
+    transform: none !important;
 }
 div.stButton > button[kind="primary"] {
     background: linear-gradient(135deg, #5b35d5, #7c3aed) !important;
     color: white !important;
     border: 0 !important;
+}
+
+/* Download button: always white text, no hover color change */
+[data-testid="stDownloadButton"] button {
+    background: #111827 !important;
+    color: #ffffff !important;
+    border: 1px solid #111827 !important;
+    box-shadow: none !important;
+    transition: none !important;
+}
+[data-testid="stDownloadButton"] button:hover,
+[data-testid="stDownloadButton"] button:focus,
+[data-testid="stDownloadButton"] button:active {
+    background: #111827 !important;
+    color: #ffffff !important;
+    border: 1px solid #111827 !important;
+    box-shadow: none !important;
+}
+[data-testid="stDownloadButton"] button p,
+[data-testid="stDownloadButton"] button span {
+    color: #ffffff !important;
 }
 
 /* Result area */
